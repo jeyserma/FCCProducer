@@ -13,7 +13,7 @@ kkmc_card = "kkmc_ee_mumu_ecm240_noFSR" # KKMCee card (in cards/$TAG/generator/k
 pythia_card = "p8_ee_default_zpole" # Pythia card; different vertex distributions for z/h pole
 
 nevents = 10000
-njobs = 1000 # -1 means to run locally (dry run)
+njobs = -1 # -1 means to run locally (dry run)
 
 ######################################################
 
