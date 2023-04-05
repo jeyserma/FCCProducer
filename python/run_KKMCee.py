@@ -9,7 +9,7 @@ import config
 ### CONFIG
 ######################################################
 tag = "winter2023" # corresponds to detector configuration
-kkmc_card = "kkmc_ee_mumu_ecm240_noFSR" # KKMCee card (in cards/$TAG/generator/kkmcee)
+kkmc_card = "kkmc_ee_mumu_ecm91p2" # KKMCee card (in cards/$TAG/generator/kkmcee)
 pythia_card = "p8_ee_default_zpole" # Pythia card; different vertex distributions for z/h pole
 
 nevents = 10000
@@ -66,7 +66,7 @@ def make(seed, savedir):
     fOut.write('cp -r %s/dizet-6.45.tar.gz . \n'%kkmcee_dir)
     fOut.write('tar -zxvf dizet-6.45.tar.gz \n')
     fOut.write('mv dizet-6.45 dizet \n')
-    fOut.write('cp %s/.KK2f_defaults ./. \n'%kkmcee_dir)
+    fOut.write('cp %s/KK2f_defaults .KK2f_defaults \n'%kkmcee_dir)
     fOut.write('mkdir ffbench \n')
     fOut.write('cd ffbench \n')
     fOut.write('cp %s/ProdMC ./. \n'%kkmcee_dir)
