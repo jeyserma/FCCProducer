@@ -3,7 +3,7 @@
 
 model = SM
 
-# Center of mass energy
+# Center of mass energy 88.5, 89.5, 90.2, 91.2, 92.0, 93.0, 93.7
 sqrts = 91.2 GeV
 
 # Processes
@@ -11,7 +11,7 @@ sqrts = 91.2 GeV
 #?vis_diags = true
 
 
-process proc = A, A => e2,E2  
+process proc = A, A => e3,E3  
 
 beams = e1, E1 => epa, epa
 ?keep_beams  = true    
@@ -29,7 +29,7 @@ isr_alpha          = 0.0072993
 isr_mass           = me
 
 
-cuts = all M > 5 GeV [ e2, E2 ]
+cuts = all M > 5 GeV [ e3, E3 ]
 
 
 ! Parton shower and hadronization

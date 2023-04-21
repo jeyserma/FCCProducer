@@ -9,11 +9,11 @@ import config
 ### CONFIG
 ######################################################
 tag = "winter2023" # corresponds to detector configuration
-kkmc_card = "kkmc_ee_mumu_ecm91p2" # KKMCee card (in cards/$TAG/generator/kkmcee)
+kkmc_card = "kkmc_ee_uu_ecm91p2_noISR" # KKMCee card (in cards/$TAG/generator/kkmcee)
 pythia_card = "p8_ee_default_zpole" # Pythia card; different vertex distributions for z/h pole
 
 nevents = 10000
-njobs = -1 # -1 means to run locally (dry run)
+njobs = 1000 # -1 means to run locally (dry run)
 
 ######################################################
 

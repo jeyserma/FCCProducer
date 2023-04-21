@@ -3,7 +3,7 @@
 
 model = SM
 
-# Center of mass energy 88.5, 89.5, 90.2, 91.2, 92.0, 93.0, 93.7
+# Center of mass energy
 sqrts = 91.2 GeV
 
 ms = 0

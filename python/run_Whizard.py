@@ -9,9 +9,13 @@ import config
 ### CONFIG
 ######################################################
 tag = "winter2023" # corresponds to detector configuration
-whizard_card = "wzp6_ee_mumu_ecm91p2" # KKMCee card (in cards/$TAG/generator/kkmcee)
+whizard_card = "wzp6_ee_mumu_ecm240" # KKMCee card (in cards/$TAG/generator/kkmcee)
 
-nevents = 1000
+#nevents = 100000
+nevents = 25000 # wzp6_ee_ee_Mee_5_150_ecm91p2
+#nevents = 10000  # for qq, gaga
+#nevents = 20000 # tautau
+#nevents = 5000 # gaga qq
 njobs = -1 # -1 means to run locally (dry run)
 
 ######################################################
@@ -20,7 +24,7 @@ njobs = -1 # -1 means to run locally (dry run)
 cwd = os.getcwd()
 stack = config.stacks[tag]
 priority = 'group_u_FCC.local_gen'
-queue = "workday" # espresso microcentury longlunch workday tomorrow testmatch nextweek
+queue = "tomorrow" # espresso microcentury longlunch workday tomorrow testmatch nextweek
 
 
 whizard_card_def = f"{cwd}/cards/{tag}/generator/whizard/{whizard_card}.sin"
@@ -85,11 +89,11 @@ if __name__=="__main__":
             quit()
         os.makedirs(local_dir)
         out_dir = local_dir
-        sh = make(1111111111, local_dir)
+        sh = make(32768, local_dir)
         os.system('cd %s && %s'%(local_dir, sh))
         
         # extract cross-section
-        os.system('cat %s/job_1111111111/whizard.log | grep "| Time estimate for generating" -B 3'%local_dir)
+        os.system('cat %s/job_32768/whizard.log | grep "| Time estimate for generating" -B 3'%local_dir)
     else:
         if not os.path.exists(submit_dir):
             os.makedirs(submit_dir)
@@ -99,7 +103,7 @@ if __name__=="__main__":
         execs = []
         njob = 0
         while njob < njobs:
-            seed = f"{random.randint(1000000000,9999999999)}"
+            seed = f"{random.randint(10000,32768)}"
             sh = make(seed, submit_dir)
             if sh == -1:
                 continue
