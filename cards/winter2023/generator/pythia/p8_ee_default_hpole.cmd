@@ -30,7 +30,7 @@ Beams:sigmaTime = 4.227    !  14.1 ps
 
 ! 4) Settings for the event generation process in the Pythia8 library.
 PartonLevel:ISR = off               ! initial-state radiation
-PartonLevel:FSR = off               ! final-state radiation
+PartonLevel:FSR = on               ! final-state radiation
 
 Check:epTolErr = 1   
 Check:mTolErr = 1   ! necessary for xing

@@ -11,7 +11,7 @@
 
 model = SM
 
-mH     = 125 GeV
+mH     = 124.95 GeV
 
 # Center of mass energy
 sqrts = 240 GeV
@@ -21,14 +21,12 @@ sqrts = 240 GeV
 #?vis_diags = true
 
 
-process proc = e1, E1 => H, e2, E2
+process proc = e1, E1 => H, e1, E1
 
-beams = e1, E1 => gaussian => isr
+beams = e1, E1 => isr
 ?keep_beams  = true    # do not use this option, makes Pythia crash
 ?keep_remnants = true
 
-gaussian_spread1 = 0.185%
-gaussian_spread2 = 0.185%
 
 
 ?isr_handler       = true

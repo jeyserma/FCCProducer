@@ -1,0 +1,22 @@
+ 1 1 0 0 0 0 0 0         KAT1-KAT8        <- Input for the main program
+N_EVENTS           NEVT number of events
+----------cccccccccccccccccccccccccccccommentttttttttttttttttttttttttttttttttttt
+
+BeginX
+********************************************************************************
+*               ACTUAL DATA FOR THIS PARTICULAR RUN
+********************************************************************************
+*indx_____data______ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0
+*     Center-of-mass energy [GeV]
+    1         91.2e0      CMSene =xpar( 1) Average Center of mass energy [GeV]
+   20              0      KeyISR=xpar(20)  Default is  1, for beams       |<<<<|
+   21              0      KeyFSR=xpar(21)  Default is  1, for all final fermions
+   50              0      KeyHad=xpar(50)  Default is  1
+   28              0      KeyGPS=xpar(28)  Default is  1
+********************************************************************************
+*     Define process
+  402              1      KFfin, u
+  100              1      store lhe file to (LHE_OUT.LHE)
+************************* one can change the lhf file name between brackets 
+********************************************************************************
+EndX
