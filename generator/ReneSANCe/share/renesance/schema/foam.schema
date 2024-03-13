@@ -1,0 +1,108 @@
+schema: {
+properties: {
+#--------------------------------------------------------------------------------------------------
+RanSeed        : {type: integer, default: 1};   # Seed for RNG initialization (0 <= RanSeed <= 9E8)
+NevBorn        : {type: integer, default: 1000000};   # MC statistics for Born
+NevVirt        : {type: integer, default: 100000};   # MC statistics for Virt
+NevHard        : {type: integer, default: 1000000};   # MC statistics for Hard
+NevLL11        : {type: integer, default: 1000000};   # MC statistics for LL11
+NevLL22        : {type: integer, default: 1000000};   # MC statistics for LL22
+NevLL12        : {type: integer, default: 1000000};   # MC statistics for LL12
+NevBrdq        : {type: integer, default: 1000000};   # MC statistics for Brdq
+NevIbaa        : {type: integer, default: 1000000};   # MC statistics for Ibaa
+NevIbaq        : {type: integer, default: 1000000};   # MC statistics for Ibaq
+NevIbs1        : {type: integer, default: 1000000};   # MC statistics for Ibs1
+NevIbs2        : {type: integer, default: 1000000};   # MC statistics for Ibs2
+NevTot         : {type: integer, default: N_EVENTS};   # MC statistics for Total
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Born
+kDimBorn       :  {type: integer, default: 5};
+nCellsBorn     :  {type: integer, default: 10000};   # Number of Cells
+nSamplBorn     :  {type: integer, default: 20000};   # Number of MC events per cell in build-up
+nBinBorn       :  {type: integer, default: 4};   # Number of bins in build-up
+EvPerBinBorn   :  {type: integer, default: 25};   # Maximum events (equiv.) per bin in buid-up
+MaxWtRejBorn   :  {type: number, default: 1.1};    # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Virt
+kDimVirt       :  {type: integer, default: 5};
+nCellsVirt     :  {type: integer, default: 3000};   # Number of Cells
+nSamplVirt     :  {type: integer, default: 6000};   # Number of MC events per cell in build-up
+nBinVirt       :  {type: integer, default: 4};   # Number of bins in build-up
+EvPerBinVirt   :  {type: integer, default: 25};   # Maximum events (equiv.) per bin in buid-up
+MaxWtRejVirt   :  {type: number, default: 1.1};    # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Hard
+kDimHard       :  {type: integer, default: 8};
+nCellsHard     :  {type: integer, default: 20000};   # Number of Cells
+nSamplHard     :  {type: integer, default: 40000};   # Number of MC events per cell in build-up
+nBinHard       :  {type: integer, default: 16};   # Number of bins in build-up
+EvPerBinHard   :  {type: integer, default: 25};   # Maximum events (equiv.) per bin in buid-up
+MaxWtRejHard   :  {type: number, default: 2.};    # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for LL11
+nCellsLL11     :  {type: integer, default: 20000};   # Number of Cells
+nSamplLL11     :  {type: integer, default: 40000};   # Number of MC events per cell in build-up
+nBinLL11       :  {type: integer, default: 16};   # Number of bins in build-up
+EvPerBinLL11   :  {type: integer, default: 25};   # Maximum events (equiv.) per bin in buid-up
+MaxWtRejLL11   :  {type: number, default: 2.};    # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for LL22
+nCellsLL22     :  {type: integer, default: 20000};   # Number of Cells
+nSamplLL22     :  {type: integer, default: 40000};   # Number of MC events per cell in build-up
+nBinLL22       :  {type: integer, default: 16};   # Number of bins in build-up
+EvPerBinLL22   :  {type: integer, default: 25};   # Maximum events (equiv.) per bin in buid-up
+MaxWtRejLL22   :  {type: number, default: 2.};    # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for LL12
+nCellsLL12     :  {type: integer, default: 20000};   # Number of Cells
+nSamplLL12     :  {type: integer, default: 40000};   # Number of MC events per cell in build-up
+nBinLL12       :  {type: integer, default: 16};   # Number of bins in build-up
+EvPerBinLL12   :  {type: integer, default: 25};   # Maximum events (equiv.) per bin in buid-up
+MaxWtRejLL12   :  {type: number, default: 2.};    # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Brdq
+kDimBrdq       :  {type: integer, default: 6};        # HYP-CUBICAL subspace
+nCellsBrdq     :  {type: integer, default: 30000};    # Number of Cells
+nSamplBrdq     :  {type: integer, default: 10000};    # Number of MC events per cell in build-up
+nBinBrdq       :  {type: integer, default: 100};      # Number of bins in build-up
+EvPerBinBrdq   :  {type: integer, default: 100};    # Maximum events (equiv.) per bin in buid-up
+MaxWtRejBrdq   :  {type: number, default: 2.};        # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Ibaa
+kDimIbaa       :  {type: integer, default: 5};        # HYP-CUBICAL subspace
+nCellsIbaa     :  {type: integer, default: 30000};    # Number of Cells
+nSamplIbaa     :  {type: integer, default: 10000};    # Number of MC events per cell in build-up
+nBinIbaa       :  {type: integer, default: 100};      # Number of bins in build-up
+EvPerBinIbaa   :  {type: integer, default: 100};    # Maximum events (equiv.) per bin in buid-up
+MaxWtRejIbaa   :  {type: number, default: 2.};        # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Ibaq
+kDimIbaq       :  {type: integer, default: 8};        # HYP-CUBICAL subspace
+nCellsIbaq     :  {type: integer, default: 30000};    # Number of Cells
+nSamplIbaq     :  {type: integer, default: 10000};    # Number of MC events per cell in build-up
+nBinIbaq       :  {type: integer, default: 100};      # Number of bins in build-up
+EvPerBinIbaq   :  {type: integer, default: 100};    # Maximum events (equiv.) per bin in buid-up
+MaxWtRejIbaq   :  {type: number, default: 2.};        # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Ibs1
+kDimIbs1       :  {type: integer, default: 6};        # HYP-CUBICAL subspace
+nCellsIbs1     :  {type: integer, default: 30000};    # Number of Cells
+nSamplIbs1     :  {type: integer, default: 10000};    # Number of MC events per cell in build-up
+nBinIbs1       :  {type: integer, default: 100};      # Number of bins in build-up
+EvPerBinIbs1   :  {type: integer, default: 100};    # Maximum events (equiv.) per bin in buid-up
+MaxWtRejIbs1   :  {type: number, default: 2.};        # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# FOAM parameters for Ibs2
+kDimIbs2       :  {type: integer, default: 6};        # HYP-CUBICAL subspace
+nCellsIbs2     :  {type: integer, default: 30000};    # Number of Cells
+nSamplIbs2     :  {type: integer, default: 10000};    # Number of MC events per cell in build-up
+nBinIbs2       :  {type: integer, default: 100};      # Number of bins in build-up
+EvPerBinIbs2   :  {type: integer, default: 100};    # Maximum events (equiv.) per bin in buid-up
+MaxWtRejIbs2   :  {type: number, default: 2.};        # Maximum wt for rejection, for OptRej=1
+#--------------------------------------------------------------------------------------------------
+# General FOAM parameters
+OptRej         :  {type: integer, minimum: 0, maximum: 1, default: 1};   # if 0, weighted events;  if 1, wt=1 events
+OptDrive       :  {type: integer, minimum: 0, maximum: 2, default: 2};   # (D=2) Option, type of Drive =0,1,2 for TrueVol,Sigma,WtMax
+Chat           :  {type: integer, minimum: 0, maximum: 2, default: 1};   # Verbosity level
+}
+}

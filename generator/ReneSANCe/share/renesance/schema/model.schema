@@ -1,0 +1,44 @@
+schema: {
+properties: {
+conhc:     {type: number, default: 0.3893793721e9}
+alphai:    {type: number, default: 137.035999084}
+alphamzi:  {description: "Inversed \alpha(M_Z)",
+            type: number, default: 128.93}
+alphas:    {type: number, default: 0.1179}
+gf:        {type: number, default: 1.1663787e-5}
+wz:        {type: number, default: 2.4952}
+ww:        {type: number, default: 2.085}
+wh:        {type: number, default: 0.}
+wtp:       {type: number, default: 1.42}
+
+mh:        {type: number, default: 125.25}
+mw:        {type: number, default: 80.379}
+mz:        {type: number, default: 91.1876}
+ma:        {type: number, default: 0.}
+
+mv:        {type: number, default: 91.1876}
+
+men:       {type: number, default: 1.0e-10}
+mel:       {type: number, default: 0.51099895000e-3}
+mmn:       {type: number, default: 1.0e-10}
+mmo:       {type: number, default: 0.1056583745}
+mtn:       {type: number, default: 1.0e-10}
+mta:       {type: number, default: 1.77686}
+mup:       {type: number, default: 0.048}
+mdn:       {type: number, default: 0.059}
+mch:       {type: number, default: 1.67}
+mst:       {type: number, default: 0.150}
+mtp:       {type: number, default: 172.76}
+mbt:       {type: number, default: 4.78}
+
+vud:       {type: number, default: 0.97435}
+vus:       {type: number, default: 0.22500}
+vub:       {type: number, default: 0.00369}
+vcd:       {type: number, default: 0.22486}
+vcs:       {type: number, default: 0.97349}
+vcb:       {type: number, default: 0.04182}
+vtd:       {type: number, default: 0.00857}
+vts:       {type: number, default: 0.04110}
+vtb:       {type: number, default: 0.999118}
+}
+}

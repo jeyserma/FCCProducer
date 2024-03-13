@@ -1,0 +1,61 @@
+
+# samples according to FCC baseline plan
+python python/submit.py -p yfsww_ee_ww_noBES --ecm 163 --nevents 100000 --njobs 100 --submit
+python python/submit.py -p yfsww_ee_ww_noBES --ecm 157 --nevents 100000 --njobs 100 --submit
+
+
+
+# cross-section calcs
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 155
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 156
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 157
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 158
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 159
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 160
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 161
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 162
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 163
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 164
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 165
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 166
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 167
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 168
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 169
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skipDelphes --submit --njobs 10 --ecm 170
+
+
+
+
+# generate events
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --submit --njobs 10 --ecm 180 
+
+
+
+python python/submit.py -p yfsww_ee_ww_ud_noBES_Born  --nevents 1000000 --skip_delphes --ecm 180
+python python/submit.py -p yfsww_ee_ww_ud_noBES_Born  --nevents 1000000 --submit --njobs 10 --ecm 180 
+
+
+
+
+python python/submit.py -p p8_ee_WW_noBES -n 100000 --ecm 163 --njobs 50 --submit 5.360
+python python/submit.py -p p8_ee_ZZ_noBES -n 100000 --ecm 163 --njobs 50 --submit 0.490
+python python/submit.py -p p8_ee_WW_mumu_noBES -n 100000 --ecm 163 --njobs 50 --submit 0.063
+python python/submit.py -p p8_ee_Z_noBES -n 100000 --ecm 163 --njobs 50 --submit 209.672
+
+python python/submit.py -p p8_ee_Z_noBES -n 100000 --ecm 157 --njobs 50 --submit 236.179
+python python/submit.py -p p8_ee_ZZ_noBES -n 100000 --ecm 157 --njobs 50 --submit 0.503
+
+
+
+
+kkmcee_ee_uu _ecm240  xSecPb, xErrPb =   11.288610788730493        3.1692882407346530E-002
+kkmcee_ee_uu _ecm365   xSecPb, xErrPb =   4.5690019169133356        1.2091142942618410E-002
+kkmcee_ee_uu _ecm163 30.406357008903370        8.2338124068016036E-002
+kkmcee_ee_mumu _ecm163 13.597841712800719        4.7523589817882059E-002
+kkmcee_ee_mumu _ecm240 5.8734532054195965        1.9531126663389919E-002
+kkmcee_ee_mumu _ecm365  2.6365932776648249        8.2970091571134968E-003
+
+
+
+
+python python/submit.py -p yfsww_ee_ww_noBES  --nevents 1000000 --skip_delphes --submit --njobs 1 --ecm 155

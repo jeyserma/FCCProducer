@@ -4,8 +4,8 @@ generator = "p8"
 cfg = '''
 ! 1) Settings used in the main program.
 Random:setSeed = on
-Random:seed = {0}                  ! seed
-Main:numberOfEvents = {1}          ! number of events
+Random:seed = {seed}               ! seed
+Main:numberOfEvents = {nevents}    ! number of events
 Main:timesAllowErrors = 5          ! how many aborts before run stops
 
 ! 2) Settings related to output in init(), next() and stat().
@@ -19,7 +19,6 @@ Next:numberShowEvent = 0           ! print event record n times
 ! 3) Beam parameter settings. Values below agree with default ones.
 Beams:idA = 11                    ! first beam
 Beams:idB = -11                   ! second beam
-!PDF:lepton = on
 PDF:beamA2gamma = on
 PDF:beamB2gamma = on
 
@@ -38,15 +37,16 @@ Beams:allowMomentumSpread  = off
 !Beams:sigmaTime = 10.89 ! 36.3 ps
 
 
-! 4) Hard process : Z->all
-Photon:Q2max = 1.0
-Photon:Wmin  = 10.0
-
-
-
+! 4) Tow-photon process
+PhotonCollision:all = off
 PhotonCollision:gmgm2qqbar = on
+PhotonCollision:gmgm2ccbar = on
+PhotonCollision:gmgm2bbbar = on
 
-PartonLevel:ISR = off               ! initial-state radiation
-!PartonLevel:FSR = on               ! final-state radiation
+Photon:Q2max = 2    ! Upper limit for (quasi-)real photon virtuality (max 2)
+Photon:Wmin = 5     ! Lower limit for invariant mass of gamma-gamma
+
+PartonLevel:ISR = off              ! initial-state radiation
+PartonLevel:FSR = on               ! final-state radiation
 '''
 

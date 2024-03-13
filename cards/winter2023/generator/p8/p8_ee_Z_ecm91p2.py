@@ -4,8 +4,8 @@ generator = "p8"
 cfg = '''
 ! 1) Settings used in the main program.
 Random:setSeed = on
-Random:seed = {0}                  ! seed
-Main:numberOfEvents = {1}          ! number of events
+Random:seed = {seed}               ! seed
+Main:numberOfEvents = {nevents}    ! number of events
 Main:timesAllowErrors = 5          ! how many aborts before run stops
 
 ! 2) Settings related to output in init(), next() and stat().

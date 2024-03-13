@@ -1,0 +1,6 @@
+
+
+python python/submit.py -p wz3p6_ee_gaga_mumu_ecm91p2  --nevents 100 --ecm 91.2
+
+python python/submit.py -p wz3p6_ee_gaga_mumu_ecm91p2_cfg1  --nevents 1000 --ecm 91.2
+python python/submit.py -p wz3p6_ee_gaga_mumu_ecm91p2_cfg1  --nevents 100000 --ecm 91.2 --njobs 10 --submit

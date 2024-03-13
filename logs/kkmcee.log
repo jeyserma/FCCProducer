@@ -1,0 +1,15 @@
+
+
+python python/submit.py -p kkmcee_ee_uu --ecm 163 --nevents 10000 --njobs 500 --submit
+python python/submit.py -p kkmcee_ee_mumu --ecm 163 --nevents 10000 --njobs 1000 --submit
+
+python python/submit.py -p kkmcee_ee_uu --ecm 240 --nevents 10000 --njobs 500 --submit
+python python/submit.py -p kkmcee_ee_mumu --ecm 240 --nevents 10000 --njobs 1000 --submit
+
+python python/submit.py -p kkmcee_ee_uu --ecm 365 --nevents 10000 --njobs 500 --submit
+python python/submit.py -p kkmcee_ee_mumu --ecm 365 --nevents 10000 --njobs 1000 --submit
+
+
+
+
+

@@ -1,0 +1,123 @@
+schema: {
+properties: {
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Process id:
+pid : {type: integer, minimum: 101, maximum: 223}
+    # 101 - e^+e^-  --> e^-e^+
+    # 102 - e^+e^-  --> ZH
+    # 103 - e^+e^-  --> mu^-mu^+
+    # 104 - e^+e^-  --> tau^-tau^+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# ALR:
+alr  : {type: integer, minimum: 0, maximum: 4, default: 0}
+    # 0 - sigma, 1 - sigma_RL-sigma_LR, 2 - sigma_RL+sigma_LR,
+    # 3 - sigma_0L-sigma_0R, 4 - sigma_0L+sigma_0R
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Longitudinal polarization of initial particles:
+lamep :    {type: number, minimum: -1., maximum: 1., default: 0.} # e^+ polarization
+lamem :    {type: number, minimum: -1., maximum: 1., default: 0.} # e^- polarization
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# EW scheme:
+gfscheme : {type: integer, minimum: 0, maximum: 2, default: 0}
+ # 0 - alpha(0)
+ # 1 - gfermi
+ # 2 - alpha(M_Z)
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Cuts:
+costhcut : {type: number, minimum: 0., maximum: 1., default: 1.} # cut on |cos(theta)|
+thetacut : {type: number, minimum: 0., maximum: 90., default: 0.} # cut on theta in degrees (thetacut < theta < 180-thetacut)
+e5max    : {type: number, minimum: 0., maximum: inf, default: inf}
+eta3cut: {type: boolean, default: false}
+eta3min: {type: number, minimum: -1.e+2, maximum: 1.e+2, default: -2.5}
+eta3max: {type: number, minimum: -1.e+2, maximum: 1.e+2, default: 2.5}
+eta4cut: {type: boolean, default: false}
+eta4min: {type: number, minimum: -1.e+2, maximum: 1.e+2, default: -2.5}
+eta4max: {type: number, minimum: -1.e+2, maximum: 1.e+2, default: 2.5}
+pt3cut: {type: boolean, default: false}
+pt3min: {type: number, minimum: 0., maximum: 1.e+6, default: 25.}
+pt3max: {type: number, minimum: 0., maximum: 1.e+6, default: 1.e+6}
+pt4cut: {type: boolean, default: false}
+pt4min: {type: number, minimum: 0., maximum: 1.e+6, default: 25.}
+pt4max: {type: number, minimum: 0., maximum: 1.e+6, default: 1.e+6}
+m34cut: {type: boolean, default: false}
+m34min: {type: number, minimum: 0., maximum: 1.e+6, default: 50.}
+m34max: {type: number, minimum: 0., maximum: 1.e+6, default: 1.e+6}
+mt34cut: {type: boolean, default: false}
+mt34min: {type: number, minimum: 0., maximum: 1.e+6, default: 0.}
+mt34max: {type: number, minimum: 0., maximum: 1.e+6, default: 1.e+6}
+y34cut: {type: boolean, default: false}
+y34min: {type: number, minimum: -1.e2, maximum: 1.e2, default: -2.4}
+y34max: {type: number, minimum: -1.e2, maximum: 1.e2, default: 2.4}
+xmin: {type: number, minimum: 0., maximum: 1., default: 1.e-10}
+xmax: {type: number, minimum: 0., maximum: 1., default: 1.}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ibeams   : {type: integer, minimum: 1, maximum: 2, default: 1}
+iafb     : {type: integer, minimum: 0, maximum: 4, default: 0}
+iach     : {type: integer, minimum: 0, maximum: 2, default: 0}
+icuts    : {type: integer, minimum: 0, maximum: 10, default: 0}
+iscale   : {type: integer, minimum: 0, maximum: 3, default: 3}
+irun     : {type: integer, minimum: 0, maximum: 1, default: 0}
+iborn    : {type: integer, minimum: 0, maximum: 1, default: 0}
+igmz     : {type: integer, minimum: 0, maximum: 2, default: 0}
+  # 0 - full gamma^*/Z structure, with interference included
+  # 1 - only pure gamma^* contribution
+  # 2 - only pure Z contribution
+iqed     : {type: integer, minimum: 0, maximum: 7, default: 1}
+iqedlli  : {type: integer, minimum: 0, maximum: 11, default: 0}
+iqedllf  : {type: integer, minimum: 0, maximum: 11, default: 0}
+iew      : {type: integer, minimum: 0, maximum: 1, default: 1}
+iqcd     : {type: integer, minimum: 0, maximum: 1, default: 0}
+ifs      : {type: integer, minimum: 0, maximum: 1, default: 0}
+iho      : {type: integer, minimum: 0, maximum: 6, default: 0}
+ilin     : {type: integer, minimum: 0, maximum: 1, default: 1}
+ifgg     : {type: integer, minimum: 0, maximum: 4, default: 1}
+its      : {type: integer, minimum: 0, maximum: 1, default: 0}
+imsb     : {type: integer, minimum: 0, maximum: 2, default: 2}
+iph      : {type: integer, minimum: 0, maximum: 3, default: 0}
+cfl: {type: number, default: 1}
+cfq: {type: number, default: 3}
+nc : {type: number, default: 1}
+fc : {type: number, default: 3}
+ecm      : {type: number} # collision CM energy
+ome      : {type: number, default: 1e-4} # E_gamma > ome*ecm/2
+ea       : {type: number, default: 0} # Beam A energy
+eb       : {type: number, default: 0} # Beam B energy
+deltall  : {type: number, default: 1e-4}
+scalell  : {type: number, default: 250}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+pdfname: {type: string, default: "CT14nlo"}
+pdfmember: {type: integer, default: 0}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+forceOffSV : {type: boolean, default: false}
+forceOffH : {type: boolean, default: false}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+exploreBorn : {type: boolean, default: true}
+exploreVirt : {type: boolean, default: true}
+exploreHard : {type: boolean, default: true}
+exploreLLI11 : {type: boolean, default: true}
+exploreLLI22 : {type: boolean, default: true}
+exploreLLI12 : {type: boolean, default: true}
+exploreLLF11 : {type: boolean, default: true}
+exploreLLF22 : {type: boolean, default: true}
+exploreLLF12 : {type: boolean, default: true}
+exploreBrdq : {type: boolean, default: true}
+exploreIbaa : {type: boolean, default: true}
+exploreIbaq : {type: boolean, default: true}
+exploreIbs1 : {type: boolean, default: true}
+exploreIbs2 : {type: boolean, default: true}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+printLHE  : {type: boolean, default: false}
+printROOT : {type: boolean, default: false}
+printHard : {type: boolean, default: false}
+printDEBUG: {type: boolean, default: false}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+outputDir : {type: string, default: Results}
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+revision : {type: number, default: 2, readOnly: true}
+},
+additionalProperties: false
+}
+
+
+.include(duplicate=merge) "${CURDIR}/model.schema"
+.include(duplicate=merge) "${CURDIR}/foam.schema"
