@@ -13,19 +13,17 @@ BeginX
  1600   {nevents} number of events to be generated
  1700   {seed} seed, 0<=IJKLIN<=900000000
     1   <ecm> CMSEne =xpar( 1) ! CMS total energy [GeV]
-   25              3      KeyFix=0 normal, =2 beamsstrahlung =3,4 for gaussian BES 
+   25              0      KeyFix=0 normal, =2 beamsstrahlung =3,4 for gaussian BES 
    50              0      KeyHad=xpar(50)  Default is  1
    20              1      KeyISR=xpar(20)  Default is  1, for beams       |<<<<|
    21              1      KeyFSR=xpar(21)  Default is  1, for all final fermions
+   27              2      KeyINT=xpar(27)  Default is  2
+   29              1      KeyQSR=xpar(29)  Default is  1
+   12              1      KeyELW=xpar(12) Deafault is 1, for Dizet
 *indx_____data______ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0
-   80          0.0e0      ParBES(0) E1=0 will be replaced by CMSene/2
-   81          0.0e0      ParBES(1) E2=0 will be replaced by CMSene/2
-   82      0.00132e0      ParBES(2) sigma1/E1
-   83      0.00132e0      ParBES(3) sigma2/E2
-   84        0.000e0      ParBES(3) rho correlation parameter, dimensionles
 ********************************************************************************
 *     Define process
-  402              1      KFfin, muon
+  413              1      KFfin, u
   100              1      store lhe file to (LHE_OUT.LHE)
 ************************* one can change the lhf file name between brackets 
 ********************************************************************************

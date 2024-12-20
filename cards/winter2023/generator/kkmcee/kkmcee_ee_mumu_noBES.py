@@ -1,5 +1,5 @@
 
-generator = "yfsww"
+generator = "kkmcee"
 parms = ["ecm"]
 
 
@@ -15,7 +15,7 @@ BeginX
     1   <ecm> CMSEne =xpar( 1) ! CMS total energy [GeV]
    25              3      KeyFix=0 normal, =2 beamsstrahlung =3,4 for gaussian BES 
    50              0      KeyHad=xpar(50)  Default is  1
-   20              1      KeyISR=xpar(20)  Default is  1, for beams       |<<<<|
+   20              0      KeyISR=xpar(20)  Default is  1, for beams       |<<<<|
    21              1      KeyFSR=xpar(21)  Default is  1, for all final fermions
 *indx_____data______ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0
    80          0.0e0      ParBES(0) E1=0 will be replaced by CMSene/2

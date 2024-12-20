@@ -24,7 +24,7 @@ parser.add_argument("-c", "--campaign", type=str, help="Campaign name", default=
 parser.add_argument("-e", "--ext", type=str, help="Extension", default="")
 parser.add_argument("--condor_queue", type=str, help="Condor priority", choices=["espresso", "microcentury", "longlunch", "workday", "tomorrow", "testmatch", "nextweek"], default="workday")
 parser.add_argument("--condor_priority", type=str, help="Condor priority", default="group_u_FCC.local_gen")
-parser.add_argument("--storagedir", type=str, help="Base directory to save the samples", default="/eos/experiment/fcc/users/j/jaeyserm/sampleProduction2024")
+parser.add_argument("--storagedir", type=str, help="Base directory to save the samples", default="/eos/cms/store/user/jaeyserm/fccee/")
 parser.add_argument("--skipDelphes", action='store_true', help="Skip Delphes step")
 
 
@@ -149,7 +149,9 @@ class FCCProducer:
         fOut.write(f'Error          = {self.submit_dir}/condor_job.$(ClusterId).$(ProcId).error\n')
         fOut.write(f'getenv         = True\n')
         fOut.write(f'environment    = "LS_SUBCWD={self.submit_dir}"\n')
-        fOut.write(f'requirements   = ( (OpSysAndVer =?= "CentOS7") && (Machine =!= LastRemoteHost) && (TARGET.has_avx2 =?= True) )\n')
+        fOut.write(f'requirements   = ( (OpSysAndVer =?= "AlmaLinux9") && (Machine =!= LastRemoteHost) && (TARGET.has_avx2 =?= True) )\n')
+        #fOut.write(f'requirements   = ( (OpSysAndVer =?= "CentOS7") && (Machine =!= LastRemoteHost) && (TARGET.has_avx2 =?= True) )\n')
+        #fOut.write(f'requirements   = ( (OpSysAndVer =?= "AlmaLinux9") && (Machine =!= LastRemoteHost) && (TARGET.has_avx2 =?= True) )\n')
    
         fOut.write(f'on_exit_remove = (ExitBySignal == False) && (ExitCode == 0)\n')
         fOut.write(f'max_retries    = 3\n')

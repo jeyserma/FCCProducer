@@ -1,6 +1,6 @@
 
 generator = "kkmcee"
-parms = ["ecm"]
+parms = []
 
 
 cfg = r'''
@@ -12,7 +12,7 @@ BeginX
 *indx_____data______ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0
  1600   {nevents} number of events to be generated
  1700   {seed} seed, 0<=IJKLIN<=900000000
-    1   <ecm> CMSEne =xpar( 1) ! CMS total energy [GeV]
+    1   240               CMSEne =xpar( 1) ! CMS total energy [GeV]
    25              3      KeyFix=0 normal, =2 beamsstrahlung =3,4 for gaussian BES 
    50              0      KeyHad=xpar(50)  Default is  1
    20              1      KeyISR=xpar(20)  Default is  1, for beams       |<<<<|
@@ -20,12 +20,12 @@ BeginX
 *indx_____data______ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0ccccccccc0
    80          0.0e0      ParBES(0) E1=0 will be replaced by CMSene/2
    81          0.0e0      ParBES(1) E2=0 will be replaced by CMSene/2
-   82      0.00132e0      ParBES(2) sigma1/E1
-   83      0.00132e0      ParBES(3) sigma2/E2
+   82      0.00185e0      ParBES(2) sigma1/E1
+   83      0.00185e0      ParBES(3) sigma2/E2
    84        0.000e0      ParBES(3) rho correlation parameter, dimensionles
 ********************************************************************************
 *     Define process
-  402              1      KFfin, muon
+  401              1      KFfin, muon
   100              1      store lhe file to (LHE_OUT.LHE)
 ************************* one can change the lhf file name between brackets 
 ********************************************************************************
@@ -65,10 +65,10 @@ Beams:LHEF = LHE_OUT.LHE
 
 ! Vertex smearing
 Beams:allowVertexSpread = on
-Beams:sigmaVertexX = 5.96e-3
-Beams:sigmaVertexY = 23.8E-6
-Beams:sigmaVertexZ = 0.397
-Beams:sigmaTime = 10.89 ! 36.3 ps
+Beams:sigmaVertexX = 0.0098
+Beams:sigmaVertexY = 2.54e-5
+Beams:sigmaVertexZ = 0.646
+Beams:sigmaTime = 1.937
 
 ! 4) Settings for the event generation process in the Pythia8 library.
 PartonLevel:ISR = off               ! initial-state radiation
